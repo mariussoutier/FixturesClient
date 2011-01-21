@@ -1,0 +1,36 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = DESCRIPTION; 
+            name = description; 
+            prototypeName = varchar1000; 
+        }, 
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {
+            allowsNull = Y; 
+            columnName = TITLE; 
+            name = title; 
+            prototypeName = varchar255; 
+        }, 
+        {allowsNull = Y; columnName = YEAR; name = year; prototypeName = intNumber; }
+    ); 
+    attributesUsedForLocking = (description, id, title, year); 
+    className = "your.app.model.Movie"; 
+    classProperties = (description, talents, title, year); 
+    externalName = MOVIE; 
+    fetchSpecificationDictionary = {}; 
+    name = Movie; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = MovieRole; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = movieId; sourceAttribute = id; }); 
+            name = talents; 
+            propagatesPrimaryKey = Y; 
+        }
+    ); 
+}

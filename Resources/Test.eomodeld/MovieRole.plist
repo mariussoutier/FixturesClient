@@ -1,0 +1,42 @@
+{
+    attributes = (
+        {allowsNull = N; columnName = "MOVIE_ID"; name = movieId; prototypeName = id; }, 
+        {
+            allowsNull = Y; 
+            columnName = "ROLE_NAME"; 
+            name = roleName; 
+            prototypeName = varchar255; 
+        }, 
+        {
+            allowsNull = N; 
+            columnName = "TALENT_ID"; 
+            name = talentId; 
+            prototypeName = id; 
+        }
+    ); 
+    attributesUsedForLocking = (movieId, roleName, talentId); 
+    className = "your.app.model.MovieRole"; 
+    classProperties = (movie, roleName, talent); 
+    externalName = "MOVIE_ROLE"; 
+    fetchSpecificationDictionary = {}; 
+    name = MovieRole; 
+    primaryKeyAttributes = (movieId, talentId); 
+    relationships = (
+        {
+            destination = Movie; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = movieId; }); 
+            name = movie; 
+        }, 
+        {
+            destination = Talent; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = talentId; }); 
+            name = talent; 
+        }
+    ); 
+}

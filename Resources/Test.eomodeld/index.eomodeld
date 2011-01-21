@@ -1,0 +1,16 @@
+{
+    EOModelVersion = "2.1"; 
+    adaptorName = JDBC; 
+    connectionDictionary = {URL = "jdbc:h2:mem:"; driver = "org.h2.Driver"; plugin = H2PlugIn; }; 
+    entities = (
+        {className = "your.app.model.Movie"; name = Movie; }, 
+        {className = "your.app.model.MovieRole"; name = MovieRole; }, 
+        {className = "your.app.model.Talent"; name = Talent; }
+    ); 
+    userInfo = {
+        "_EntityModeler" = {
+            attributeNamingConvention = {case = Upper; separator = Underscore; }; 
+            entityNamingConvention = {case = Upper; separator = Underscore; }; 
+        }; 
+    }; 
+}

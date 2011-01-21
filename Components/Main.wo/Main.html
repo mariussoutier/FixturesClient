@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+	<head>
+		<title>Movies</title>
+	</head>
+	<body>
+
+	<h1>Movie roles</h1>
+	<wo:if condition="$movieRoles.@count">
+		<table border>
+		<tr><th>Role Name</th><th>Talent Name</th><th>Movie Title</th><th>Movie Release</th></tr>
+		<wo:loop list="$movieRoles" item="$movieRoleItem">
+		  <tr>
+		  	<td><wo:str value="$movieRoleItem.roleName"/></td>
+		    <td><wo:str value="$movieRoleItem.talent.name"/></td>
+		    <td><wo:str value="$movieRoleItem.movie.title"/></td>
+		    <td><wo:str value="$movieRoleItem.movie.year"/></td>
+		  </tr>
+		</wo:loop>
+		</table>
+	</wo:if>
+	<wo:else>
+		Data is not yet loaded, please 
+		<wo:hyperlink action="$reloadAction">reload</wo:hyperlink>.
+	</wo:else>
+	
+	</body>
+</html>

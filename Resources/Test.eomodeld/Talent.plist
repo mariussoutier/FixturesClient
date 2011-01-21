@@ -1,0 +1,24 @@
+{
+    attributes = (
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {allowsNull = Y; columnName = NAME; name = name; prototypeName = varchar255; }
+    ); 
+    attributesUsedForLocking = (id, name); 
+    className = "your.app.model.Talent"; 
+    classProperties = (movies, name); 
+    externalName = TALENT; 
+    fetchSpecificationDictionary = {}; 
+    name = Talent; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = MovieRole; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = talentId; sourceAttribute = id; }); 
+            name = movies; 
+            propagatesPrimaryKey = Y; 
+        }
+    ); 
+}

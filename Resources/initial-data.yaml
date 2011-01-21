@@ -1,0 +1,46 @@
+### Test data
+
+Talent(ASchwarzenegger):
+  name:         Arnold Schwarzenegger
+  
+Talent(LHamilton):
+  name:         Linda Hamilton
+
+
+Movie(T1):
+  title:        The Terminator
+  year:         1984
+  description:  >
+                Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit
+
+Movie(T2):
+  title:        Terminator 2 - Judgement Day
+  year:         1991
+  text:         >
+                ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+MovieRole(T800T1):
+  roleName:   T-800
+  talent:     ASchwarzenegger
+  movie:      T1
+  
+MovieRole(T00T2):
+  roleName:   T-850
+  talent:     ASchwarzenegger
+  movie:      T2
+
+MovieRole(SConnorT1):
+  roleName:   Sarah Connor
+  talent:     LHamilton
+  movie:      T1
+
+MovieRole(SConnorT2):
+  roleName:   Sarah Connor
+  talent:     LHamilton
+  movie:      T2
+
