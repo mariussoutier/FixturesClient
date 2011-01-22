@@ -9,12 +9,5 @@ public class Application extends ERXApplication {
 
 	public Application() {
 		ERXApplication.log.info("Welcome to " + this.name() + " !");
-		/* ** put your initialization code in here ** */
-	}
-
-	@Override
-	public void didFinishLaunching() {
-		super.didFinishLaunching();
-		//Fixtures.load();
 	}
 }
