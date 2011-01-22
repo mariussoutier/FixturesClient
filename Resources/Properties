@@ -1,6 +1,7 @@
 # EOFFixtues
 EOFFixtures.loadInitialData=true
-#EOFFixtures.modelPrefix=your.app.model
+EOFFixtures.fileName=initial-data.yaml
+log4j.logger.de.soutier.fixtures=DEBUG
 
 # OGNL
 ognl.helperFunctions=true
