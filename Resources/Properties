@@ -1,6 +1,7 @@
 # EOFFixtues
 EOFFixtures.loadInitialData=true
-EOFFixtures.fileName=initial-data.yaml
+EOFFixtures.fileName=movies.yaml
+EOFFixtures.language=English
 log4j.logger.de.soutier.fixtures=DEBUG
 
 # OGNL
