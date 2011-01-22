@@ -9,7 +9,15 @@
     ); 
     userInfo = {
         "_EntityModeler" = {
+            activeDatabaseConfigName = "H2 In-Memory"; 
             attributeNamingConvention = {case = Upper; separator = Underscore; }; 
+            databaseConfigs = {
+                "H2 In-Memory" = {
+                    adaptorName = JDBC; 
+                    connectionDictionary = {URL = "jdbc:h2:mem:"; driver = "org.h2.Driver"; plugin = H2PlugIn; }; 
+                    prototypeEntityName = EOJDBCH2Prototypes; 
+                }; 
+            }; 
             entityNamingConvention = {case = Upper; separator = Underscore; }; 
         }; 
     }; 
