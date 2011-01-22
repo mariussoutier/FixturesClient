@@ -17,7 +17,7 @@ Movie(T1):
 Movie(T2):
   title:        Terminator 2 - Judgement Day
   year:         1991
-  text:         >
+  description:  >
                 ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
