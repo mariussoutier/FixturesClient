@@ -8,13 +8,14 @@
 	<h1>Movie roles</h1>
 	<wo:if condition="$movieRoles.@count">
 		<table border>
-		<tr><th>Role Name</th><th>Talent Name</th><th>Movie Title</th><th>Movie Release</th></tr>
+		<tr><th>Role Name</th><th>Talent Name</th><th>Movie Title</th><th>Movie Release</th><th>Last Updated</th></tr>
 		<wo:loop list="$movieRoles" item="$movieRoleItem">
 		  <tr>
 		  	<td><wo:str value="$movieRoleItem.roleName"/></td>
 		    <td><wo:str value="$movieRoleItem.talent.name"/></td>
 		    <td><wo:str value="$movieRoleItem.movie.title"/></td>
 		    <td><wo:str value="$movieRoleItem.movie.year"/></td>
+		    <td><wo:str value="$movieRoleItem.lastUpdated" dateformat="%m/%d/%y"/></td>
 		  </tr>
 		</wo:loop>
 		</table>

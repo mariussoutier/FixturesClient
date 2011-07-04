@@ -16,12 +16,14 @@ public abstract class _MovieRole extends  ERXGenericRecord {
   public static final String ENTITY_NAME = "MovieRole";
 
   // Attribute Keys
+  public static final ERXKey<NSTimestamp> LAST_UPDATED = new ERXKey<NSTimestamp>("lastUpdated");
   public static final ERXKey<String> ROLE_NAME = new ERXKey<String>("roleName");
   // Relationship Keys
   public static final ERXKey<your.app.model.Movie> MOVIE = new ERXKey<your.app.model.Movie>("movie");
   public static final ERXKey<your.app.model.Talent> TALENT = new ERXKey<your.app.model.Talent>("talent");
 
   // Attributes
+  public static final String LAST_UPDATED_KEY = LAST_UPDATED.key();
   public static final String ROLE_NAME_KEY = ROLE_NAME.key();
   // Relationships
   public static final String MOVIE_KEY = MOVIE.key();
@@ -35,6 +37,17 @@ public abstract class _MovieRole extends  ERXGenericRecord {
       throw new IllegalStateException("You attempted to localInstance " + this + ", which has not yet committed.");
     }
     return localInstance;
+  }
+
+  public NSTimestamp lastUpdated() {
+    return (NSTimestamp) storedValueForKey(_MovieRole.LAST_UPDATED_KEY);
+  }
+
+  public void setLastUpdated(NSTimestamp value) {
+    if (_MovieRole.LOG.isDebugEnabled()) {
+    	_MovieRole.LOG.debug( "updating lastUpdated from " + lastUpdated() + " to " + value);
+    }
+    takeStoredValueForKey(value, _MovieRole.LAST_UPDATED_KEY);
   }
 
   public String roleName() {

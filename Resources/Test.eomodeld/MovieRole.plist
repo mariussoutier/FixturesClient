@@ -1,5 +1,11 @@
 {
     attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "LAST_UPDATED"; 
+            name = lastUpdated; 
+            prototypeName = dateTime; 
+        }, 
         {allowsNull = N; columnName = "MOVIE_ID"; name = movieId; prototypeName = id; }, 
         {
             allowsNull = Y; 
@@ -14,9 +20,9 @@
             prototypeName = id; 
         }
     ); 
-    attributesUsedForLocking = (movieId, roleName, talentId); 
+    attributesUsedForLocking = (lastUpdated, movieId, roleName, talentId); 
     className = "your.app.model.MovieRole"; 
-    classProperties = (movie, roleName, talent); 
+    classProperties = (lastUpdated, movie, roleName, talent); 
     externalName = "MOVIE_ROLE"; 
     fetchSpecificationDictionary = {}; 
     name = MovieRole; 

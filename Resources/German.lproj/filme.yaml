@@ -25,22 +25,26 @@ Movie(T2):
 
 
 MovieRole(T800T1):
-  roleName:   T-800
-  talent:     ASchwarzenegger
-  movie:      T1
+  roleName:    T-800
+  talent:      ASchwarzenegger
+  movie:       T1
+  lastUpdated: !ts -5 weeks
   
 MovieRole(T00T2):
-  roleName:   T-850
-  talent:     ASchwarzenegger
-  movie:      T2
+  roleName:    T-850
+  talent:      ASchwarzenegger
+  movie:       T2
+  lastUpdated: !ts -3 days
 
 MovieRole(SConnorT1):
-  roleName:   Sarah Connor
-  talent:     LHamilton
-  movie:      T1
+  roleName:    Sarah Connor
+  talent:      LHamilton
+  movie:       T1
+  lastUpdated: !ts -1 months
 
 MovieRole(SConnorT2):
-  roleName:   Sarah Connor
-  talent:     LHamilton
-  movie:      T2
+  roleName:    Sarah Connor
+  talent:      LHamilton
+  movie:       T2
+  lastUpdated: !now
 
